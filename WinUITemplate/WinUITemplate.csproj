@@ -11,6 +11,8 @@
     <PublishProfile>win-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
+    <PublishAot Condition="'$(ExcludeRestorePackageImports)'=='true'">true</PublishAot>
+    <PublishAot Condition="'$(Configuration)'=='Release'">true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
