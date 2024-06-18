@@ -30,7 +30,7 @@ namespace WinUITemplate
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            myButton.Content = System.Runtime.CompilerServices.RuntimeFeature.IsDynamicCodeSupported ? "NonAOT" : "AOT";
         }
     }
 }
