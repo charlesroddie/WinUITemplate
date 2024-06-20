@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using SkiaSharp.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,7 +42,10 @@ namespace WinUITemplate
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            m_window = new MainWindow();
+            var skxc = new SKXamlCanvas();
+            //var button = new Button() { Content = "Click me!" }; -- works
+            m_window = new Window();
+            m_window.Content = skxc;
             m_window.Activate();
         }
 
